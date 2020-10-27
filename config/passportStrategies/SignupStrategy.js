@@ -56,7 +56,7 @@ module.exports = SignupStrategy = new Strategy(
         username,
         profileImage,
         
-      }).then(newUser=> done(null, newUser));
+      }).then(newUser=> done(null, newUser)); // Send it onto the Cookie-fyer. (IN REACT) send the  (err, user, info) onto the passport middleware used on the auth route
       
     })
   }

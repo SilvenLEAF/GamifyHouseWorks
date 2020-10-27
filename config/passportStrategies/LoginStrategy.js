@@ -45,6 +45,7 @@ module.exports = LoginStrategy = new Strategy(
 
 
       // if everything is OK, send the user onto the Cookie-fyer
+      // (IN REACT) send the  (err, user, info) onto the passport middleware used on the auth route
       return done(null, user)
 
     })
