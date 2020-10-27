@@ -1,5 +1,9 @@
 // helping modules
 const chalk = require('chalk');
+if(process.env.NODE_ENV !== `production`){
+  // if in DEVELOPEMENT, fire DOTENV
+  require('dotenv').config();
+}
 
 
 
@@ -45,6 +49,9 @@ app.use(express.static(path.join(__dirname, `client/build`)));
 /* -------------------------------------------------
 .                    config
 ------------------------------------------------- */
+require('./config/mongodbConfig');
+
+
 
 
 
