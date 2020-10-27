@@ -1,0 +1,26 @@
+{
+  "name": "gamifyhouseworks",
+  "version": "1.0.0",
+  "description": "Gamify your boring chores and super boring HouseWorks!!!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilvenLEAF/GamifyHouseWorks.git"
+  },
+  "author": "SilvenLEAF",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SilvenLEAF/GamifyHouseWorks/issues"
+  },
+  "homepage": "https://github.com/SilvenLEAF/GamifyHouseWorks#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}
