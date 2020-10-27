@@ -52,7 +52,7 @@ module.exports = SignupStrategy = new Strategy(
         'local.password': bcrypt.hashSync(password, bcrypt.genSaltSync()),
 
 
-        createdAt: new Date();
+        createdAt: new Date(),
         username,
         profileImage,
         
