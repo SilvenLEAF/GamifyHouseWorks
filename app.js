@@ -1,9 +1,6 @@
 // helping modules
 const chalk = require('chalk');
-if(process.env.NODE_ENV !== `production`){
-  // if in DEVELOPEMENT, fire DOTENV
-  require('dotenv').config();
-}
+require('dotenv').config();
 
 
 
