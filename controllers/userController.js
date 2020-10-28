@@ -33,7 +33,9 @@ module.exports.get_all_users = async (req, res, next)=>{
 ------------------------------------ */
 module.exports.delete_account = async (req, res, next)=>{
   try{
-    const deleteUser = await User.findByIdAndDelete(req.user._id);
+    const { userId } = req.body;
+
+    const deleteUser = await User.findByIdAndDelete(userId);
     res.json(deleteUser);
   } catch(err){
     next(err, req, next);
@@ -55,7 +57,9 @@ module.exports.delete_account = async (req, res, next)=>{
 ------------------------------------ */
 module.exports.update_account = async (req, res, next)=>{
   try{
-    await User.findByIdAndUpdate(req.user._id, req.body);
+    const { userId } = req.body;
+
+    await User.findByIdAndUpdate(userId, req.body);
     const updatedUser = await User.findById(req.user._id);
   }catch(err){
     next(err, req, res);
