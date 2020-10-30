@@ -31,7 +31,7 @@ module.exports = SignupStrategy = new Strategy(
 
 
 
-    User.findOne({ 'local.email': email }, (errr, user)=>{
+    User.findOne({ 'local.email': email }, (err, user)=>{
       
 
       // if there is an error
