@@ -15,6 +15,8 @@ Gamify your boring chores and super boring HouseWorks!!!
 * **REST API**
 * **CRUD**
 * **PWA (with Offline Game)**
+* Email Verification
+* Password reset
 * Demo Login
 * Connect with other Users
 * **
