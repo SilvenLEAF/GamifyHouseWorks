@@ -107,7 +107,7 @@ function Signup() {
       
 
     >
-      <div className="myAuthAppName">LingHun</div>
+      <div className="myAuthAppName">GamifyHouseWorks</div>
       <div className="myAuthTitle">Sign up a new account</div>
 
 

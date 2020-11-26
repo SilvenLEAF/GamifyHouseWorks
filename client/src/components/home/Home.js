@@ -24,7 +24,7 @@ function Home() {
       <div id="myLandingIcon"></div>
       <div className="myLandingContentHolder">
         <h1 id="myLandingTitle" className="pageTitle">
-          LingHun
+          HouseWorks
         </h1>
         
         <div className="myLandingDescription">
@@ -33,7 +33,7 @@ function Home() {
 
         <div className="myLandingBtnHolder">
           <Link to="/actionPage" className="btn myBtn waves-effect waves-light myLandingBtn" >
-            Ling Hun Action Button
+            Action Button
           </Link>
         </div>
       </div>
