@@ -28,7 +28,7 @@ function Home() {
         </h1>
         
         <div className="myLandingDescription">
-          This is the SOUL and LING HUN of my future app. It's the spirit and core for all my future self. It's LING HUN, the SOUL of my future. It's created by SilvenLEAF. I am SilvenLEAF.
+          Gamify your boring chores and super boring houseworks! Take the boredom out of your and gamify your daily life!!
         </div>
 
         <div className="myLandingBtnHolder">
