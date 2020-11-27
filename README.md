@@ -47,7 +47,7 @@ Gamify your boring chores and super boring HouseWorks!!!
 * **
 
 ## Hosted on
-**Heroku** as *ManashSarmaTheEmperor@gmail.com*
+**Heroku** as *AlvenLEAF@gmail.com*
 ***
 
 ## How to install on your PC?
