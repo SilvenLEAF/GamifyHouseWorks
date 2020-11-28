@@ -139,6 +139,12 @@ const UserSchema = new mongoose.Schema({
 
 
 
+
+  score: {
+    type: Number,
+    default: 0,
+  },
+
   about: {
     type: String,
     default: `Hi there Stranger! Wanna know about me? Well, to be honest, there's not much to say. I am just a human from Planet Earth. I love making friends and learning new things. I LOVE exploring the unexplored adventures of life. I wanna live my life to the fullest. Let's be friends, OK?`,
