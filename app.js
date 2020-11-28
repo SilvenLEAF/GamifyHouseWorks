@@ -109,6 +109,11 @@ app.use(require('./routes/mailRoutes/VerifyEmailRoute'));
 
 
 
+//                  MAIN routes
+app.use('/houseWork', require('./routes/HouseWorkRoute'));
+
+
+
 
 // CATCH ALL HANDLER
 app.get('*', (req, res, next)=>{
