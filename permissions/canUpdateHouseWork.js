@@ -1,7 +1,7 @@
 const HouseWork = require('../models/HouseWork');
 
 
-module.exports = canUpdateAccount = (houseWorkId, user)=>{
+module.exports = canUpdateAccount = async (houseWorkId, user)=>{
 
   const houseWork = await HouseWork.findById(houseWorkId);
 

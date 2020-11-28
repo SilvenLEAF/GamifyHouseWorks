@@ -1,7 +1,7 @@
 const HouseWork = require('../models/HouseWork');
 
 
-module.exports = canDeleteAccount = (houseWorkId, user)=>{
+module.exports = canDeleteAccount = async (houseWorkId, user)=>{
 
   const houseWork = await HouseWork.findById(houseWorkId);
 
