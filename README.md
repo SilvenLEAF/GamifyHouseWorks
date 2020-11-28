@@ -9,18 +9,27 @@ Gamify your boring chores and super boring HouseWorks!!!
 
 ***
 
-## Top features
-*  **Gamify Boring HouseWorks**
-* **OAUTH 2.0**
-* **REST API**
-* **CRUD**
-* **PWA (with Offline Game)**
-* Email Verification
-* Password reset
-* Demo Login
-* Connect with other Users
-* **
 
+## TOP FEATURES
+###### Auth Features
+- [x] **Gamify HouseWorks**
+- [x] **auth**
+- [x] **oauth2.0 (Google, Github, LinkedIn)**
+- [x] **Role-based auth**
+- [x] Email verification (2 way auth)
+- [x] Password reset (Forgotten)
+
+###### Main Features
+- [x] **CRUD**
+- [x] **PWA (with Offline Game)**
+
+
+###### Others
+- [x] Demo Login
+- [x] Nodemailer Contact
+- [x] Framermotion (setup)
+***
+***
 
 
 
@@ -38,7 +47,7 @@ Gamify your boring chores and super boring HouseWorks!!!
 * **
 
 ## Hosted on
-**Heroku** as *ManashSarmaTheEmperor@gmail.com*
+**Heroku** as *AlvenLEAF@gmail.com*
 ***
 
 ## How to install on your PC?
