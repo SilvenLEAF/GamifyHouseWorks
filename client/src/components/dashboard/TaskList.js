@@ -1,5 +1,6 @@
 import M from 'materialize-css'
 import '../../styles/profile/UserList.scss'
+import '../../styles/dashboard/TaskList.scss'
 
 import React, { useEffect, useContext, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';

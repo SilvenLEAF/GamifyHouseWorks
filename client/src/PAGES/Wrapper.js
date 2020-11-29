@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, useLocation } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 
 
@@ -31,12 +31,12 @@ import TaskList from '../components/dashboard/TaskList';
 
 
 function Wrapper() {
-  const location = useLocation();
+  
   return (
     <div id="myWrapper">
       
 
-      <Switch location={ location } key={ location.key } >
+      <Switch>
 
 
         <Route exact path="/" component={Home} />
