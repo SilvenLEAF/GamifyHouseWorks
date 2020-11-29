@@ -3,10 +3,10 @@ import '../../styles/ActionPage.scss';
 
 
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
  
  
-
+import { Toast } from '../../helpers/MyAlerts';
 
 
 
@@ -15,18 +15,67 @@ function ActionPage() {
     M.AutoInit();
   }, []);
 
+  const history = useHistory();
+
 
   const [title, setTitle] = useState('');
   const [rank, setRank] = useState('bronze');
   const [ description, setDescription] = useState('');
-
+  
+  const [error, setError] = useState('');
 
 
   const handleSubmit = async (e)=>{
     e.preventDefault();
 
+    const houseWorkObj = {};
+    if(title) houseWorkObj.title = title;
+    if(rank) houseWorkObj.rank = rank;
+
+
+    const response = await fetch('/houseWork', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(houseWorkObj)
+    });
+
+    const data = await response.json();
+
+    console.log(data);
+
+    if(data.error){
+      
+      setError(data.msg);
+
+    } else {
+      setTitle('');
+
+      Toast.fire({
+        icon: 'success',
+        title: 'Your task is gamified!'
+      })
+
+      setTimeout(()=>{
+        history.push('/');
+      }, 3000)
+
+    }
+
+
     console.log(`Submit fired!`);
   }
+
+
+  useEffect(()=>{
+    if(error){
+      Toast.fire({
+        icon: 'error',
+        title: error
+      })
+    }
+  }, [error])
 
 
 
