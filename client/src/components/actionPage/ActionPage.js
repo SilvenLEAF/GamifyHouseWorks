@@ -63,8 +63,6 @@ function ActionPage() {
 
     }
 
-
-    console.log(`Submit fired!`);
   }
 
 
@@ -111,10 +109,10 @@ function ActionPage() {
             
 
                        
-            <select>              
-              <option value="bronze" selected>Bronze</option>
-              <option value="silver">Silver</option>
-              <option value="gold">Gold</option>
+            <select value={ rank } onChange={ e=> setRank(e.target.value) } >
+              <option value="bronze" selected >Bronze</option>
+              <option value="silver" >Silver</option>
+              <option value="gold" >Gold</option>
             </select>
             <label>Materialize Select</label>
 
@@ -138,10 +136,14 @@ function ActionPage() {
 
 
 
-        <div className="input-field right-align">
+        <div className="input-field myBtnsHolder right-align">
           <button type="submit" className= "btn myBtn waves-effect waves-light" id= "myDownloadBtn">
             Gamify <i className="fa fa-gamepad"></i>
           </button>
+          
+          <Link to="/dashboard" className= "btn mySecondaryBtn waves-effect waves-light" id= "myDownloadBtn">
+            TaskList
+          </Link>
         </div>
 
 

@@ -25,6 +25,7 @@ import ActionPage from '../components/actionPage/ActionPage';
 
 import VerifyEmail from '../components/auth.js/verify/VerifyEmail';
 import ChangeEmail from '../components/auth.js/verify/ChangeEmail';
+import TaskList from '../components/dashboard/TaskList';
 
 
 
@@ -40,6 +41,7 @@ function Wrapper() {
 
         <Route exact path="/" component={Home} />
         
+        <Route path="/dashboard" component={TaskList} />
         <Route path="/actionPage" component={ActionPage} />
         
         <Route path="/login" component={Login} />

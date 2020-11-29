@@ -36,7 +36,7 @@ module.exports.create_new_house_work = async (req, res, next)=>{
     
     const { title, rank } = req.body;
 
-    const newHouseWork = HouseWork.create({
+    const newHouseWork = await HouseWork.create({
       title,
       rank,
       ownerId: req.user._id,

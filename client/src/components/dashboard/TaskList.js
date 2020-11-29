@@ -12,11 +12,11 @@ import { usePaginatedQuery } from 'react-query'
 
 
 import { AuthContext } from '../../contexts/subContexts/AuthContext'
-import { AllUserContext } from '../../contexts/subContexts/AllUserContext'
+import { AllTaskContext } from '../../contexts/subContexts/AllTaskContext'
 
 
 
-import UserListItem from './UserListItem'
+import TaskListItem from './TaskListItem'
 import MyLoader from '../../helpers/MyLoader';
 
 
@@ -48,36 +48,36 @@ function TaskList() {
 
 
   const { userData, setUserData } = useContext(AuthContext)
-  const { allUsers, setAllUsers } = useContext(AllUserContext)
+  const { allTasks, setAllTasks } = useContext(AllTaskContext)
   const history = useHistory()
   
 
 
-  const { resolvedData, latestData, status } = usePaginatedQuery("allusers", getAllTasks)
-  if(resolvedData) setAllUsers(resolvedData);
+  const { resolvedData, latestData, status } = usePaginatedQuery("allTasks", getAllTasks)
+  if(resolvedData) setAllTasks(resolvedData);
 
 
 
 
 
-  if(!userData) history.push('/login');
-  if(userData && !userData.isVerified) history.push('/verifyDoor');
+  // if(!userData) history.push('/login');
+  // if(userData && !userData.isVerified) history.push('/verifyDoor');
 
-  return !allUsers[0] ?  (
+  return !allTasks[0] ?  (
     <div className="myLoaderPageHolder">
       <MyLoader/>
     </div>
   ) : (
     <div className="container myUserListPage" >      
-      <h6 className="blue-text">All users</h6>
+      <h6 className="blue-text">All Tasks</h6>
 
 
       <ul>
         {
-          allUsers[0] && allUsers.map((item, index)=>{
+          allTasks[0] && allTasks.map((item, index)=>{
             return (
               <Link to={ "/userProfile/" + index } key={ index } >
-                <UserListItem item={ item } />
+                <TaskListItem item={ item } />
               </Link>
             )
           })
