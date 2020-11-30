@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 import { Toast } from '../../helpers/MyAlerts';
 import { AuthContext } from '../../contexts/subContexts/AuthContext'
+import { AllTaskContext } from '../../contexts/subContexts/AllTaskContext';
 
 
 
@@ -12,6 +13,7 @@ import { AuthContext } from '../../contexts/subContexts/AuthContext'
 function TaskListItem({ item, score, iconImage }) {
 
   const { userData, setUserData } = useContext(AuthContext);
+  const { allTasks, setAllTasks } = useContext(AllTaskContext);
   const [error, setError] = useState('');
 
   const handleCompleted = async(e)=>{
@@ -35,6 +37,11 @@ function TaskListItem({ item, score, iconImage }) {
     if(data.error) {
       setError(data.msg);
     } else {
+      const itemIndex = allTasks.findIndex(element => element._id == item._id);
+      const allTaskList = allTasks;
+      allTaskList.splice(itemIndex, 1);
+      setAllTasks(...allTaskList);
+
       setUserData(data);      
       Toast.fire({
         icon: 'success',
