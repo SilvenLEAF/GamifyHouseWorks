@@ -94,7 +94,7 @@ function Signup() {
 
 
 
-  if(userData) history.push('/')
+  if(userData) history.push('/dashboard')
 
 
 

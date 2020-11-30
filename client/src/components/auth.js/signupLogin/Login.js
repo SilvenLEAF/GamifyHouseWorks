@@ -103,7 +103,7 @@ function Login() {
     }
   }, [error])
 
-  if(userData) history.push('/')
+  if(userData) history.push('/dashboard')
 
 
 

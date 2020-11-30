@@ -148,7 +148,7 @@ function SignUpForm() {
 
 
 
-  if(userData) history.push('/')
+  if(userData) history.push('/dashboard')
 
   return (
     <div className="container myAuthForm" >

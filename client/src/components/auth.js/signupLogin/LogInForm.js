@@ -101,7 +101,7 @@ function LogInForm() {
 
 
 
-  if(userData) history.push('/');
+  if(userData) history.push('/dashboard');
 
 
   return (
