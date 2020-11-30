@@ -35,7 +35,13 @@ function Profile() {
     })
 
     if(userData.role === 'demo'){
-      window.location.href = '/logout'
+      const response = await fetch('/logout');
+      const data = await response.json();
+
+      console.log(data);
+
+      setUserData(null)
+      history.push('/');
     } else {
       const userId = userData._id;
     
