@@ -79,10 +79,9 @@ export const SignedInPCLinks = ({ setUserData }) => {
       <li><NavLink to="/dashboard" >Dashboard</NavLink></li>      
       <li><NavLink to="/actionPage" >Gamify</NavLink></li>      
       <li><NavLink to="/allUsers" >All Users</NavLink></li>           
-      <li><NavLink to="/contact">Contact Me</NavLink></li>           
+      
       
       <li onClick={ handleLogOut } ><NavLink to="/" className="sidenav-close" >Log out</NavLink></li>
-      <li><a target="_blank" rel="noopener noreferrer" href="https://silvenleaf.github.io" >About Me</a></li>
     </>
   )
 }

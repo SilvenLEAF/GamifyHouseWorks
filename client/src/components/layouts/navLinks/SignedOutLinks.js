@@ -31,6 +31,7 @@ export const SignedOutPCLinks = () => {
       <li><NavLink to="/" >Home</NavLink></li>
       <li><NavLink to="/login" >Log in</NavLink></li>           
       <li><NavLink to="/signup">Sign up</NavLink></li>           
+      <li><NavLink to="/contact">Contact Me</NavLink></li>
       <li><a target="_blank" rel="noopener noreferrer" href="https://silvenleaf.github.io" >About Me</a></li>
     </>
   )
