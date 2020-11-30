@@ -39,9 +39,9 @@ function Profile() {
       const data = await response.json();
 
       console.log(data);
+      history.push('/');
 
       setUserData(null)
-      history.push('/');
     } else {
       const userId = userData._id;
     
