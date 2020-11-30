@@ -29,11 +29,7 @@ function Profile() {
   const deleteProfile = async (e) =>{
     e.preventDefault();
 
-    Toast.fire({
-      icon: 'info',
-      title: 'Please wait...'
-    })
-
+    
     if(userData.role === 'demo'){
       const response = await fetch('/logout');
       const data = await response.json();
@@ -43,6 +39,12 @@ function Profile() {
 
       setUserData(null)
     } else {
+
+      Toast.fire({
+        icon: 'info',
+        title: 'Please wait...'
+      })
+      
       const userId = userData._id;
     
       const deletedProfileRes = await fetch('/user/', {
