@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom'
 
 
 
-function TaskListItem({ item }) {
+function TaskListItem({ item, iconImage }) {
   return (
     <li>
-    <div className="myUserProfileIcon" style={{background: `url(${ item.profileImage || "/Logo.png" }) center/cover` }}></div>
+    <div className="myUserProfileIcon" style={{background: `url(${ iconImage || "/Logo.png" }) center/cover` }}></div>
     <div>
       <div className="myUserName">
         {item.title}

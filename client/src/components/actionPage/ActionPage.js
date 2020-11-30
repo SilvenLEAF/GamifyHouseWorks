@@ -19,7 +19,7 @@ function ActionPage() {
 
 
   const [title, setTitle] = useState('');
-  const [rank, setRank] = useState('bronze');
+  const [rank, setRank] = useState('silver');
   const [ description, setDescription] = useState('');
   
   const [error, setError] = useState('');
@@ -110,9 +110,9 @@ function ActionPage() {
 
                        
             <select value={ rank } onChange={ e=> setRank(e.target.value) } >
-              <option value="bronze" selected >Bronze</option>
               <option value="silver" >Silver</option>
               <option value="gold" >Gold</option>
+              <option value="platinum" >Platinum</option>
             </select>
             <label>Materialize Select</label>
 

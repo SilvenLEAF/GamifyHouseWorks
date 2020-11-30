@@ -75,13 +75,24 @@ function TaskList() {
 
       <ul>
         {
-          allTasks[0] && allTasks.map((item, index)=>{
-            return (
-              <Link to={ "/userProfile/" + index } key={ index } >
-                <TaskListItem item={ item } />
-              </Link>
-            )
-          })
+          allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'silver' ).map((item, index)=>{
+            return <TaskListItem item={ item } iconImage="/images/rank/silver.jpeg" key={ index } />
+          })          
+        }
+
+
+        {
+          allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'gold' ).map((item, index)=>{
+            return <TaskListItem item={ item } iconImage="/images/rank/gold.jpeg" key={ index } />
+          })          
+        }
+
+       
+
+        {
+          allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'platinum' ).map((item, index)=>{
+            return <TaskListItem item={ item } iconImage="/images/rank/platinum.jpeg" key={ index } />
+          })          
         }
       </ul>
 
