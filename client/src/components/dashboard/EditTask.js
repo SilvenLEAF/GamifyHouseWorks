@@ -18,14 +18,15 @@ function EditTask() {
 
   
   const { allTasks, setAllTasks } = useContext(AllTaskContext)
-  const { index } = useParams();  
+  const { id } = useParams();  
   const history = useHistory();
 
-  const item = allTasks[parseInt(index)];
+  const item = allTasks.find( item => item._id == id);
+  
 
 
   const [title, setTitle] = useState('');
-  const [rank, setRank] = useState('silver');
+  const [rank, setRank] = useState(item.rank);
 
   
   const [error, setError] = useState('');
@@ -61,7 +62,7 @@ function EditTask() {
 
       Toast.fire({
         icon: 'success',
-        title: 'Your task is gamified!'
+        title: 'Your task is updated!'
       })
 
       setTimeout(()=>{
@@ -99,7 +100,7 @@ function EditTask() {
           <label htmlFor="title">Title <span className="grey-text">(Optional)</span></label>
           <div>
             <i className="myPrefix far fa-address-card"></i>
-            <input type="text" name="contactTitle" value={ title } onChange={ e=> setTitle(e.target.value) } required />
+            <input type="text" name="contactTitle" value={ title } onChange={ e=> setTitle(e.target.value) } />
           </div>
         </div>
 
@@ -140,16 +141,6 @@ function EditTask() {
             Back <i className="fa fa-arrow-left"></i>
           </Link>
         </div>
-
-
-        {/* <div className="myDefaultFormFooter">
-          <p>Wanna know more about me?</p>
-          
-          <p>
-            <a target="_blank" rel="noopener noreferrer" href="https://silvenleaf.github.io" className="myThemeColorText">SilvenLEAF.github.io</a>
-          </p>
-        </div> */}
-
 
 
 

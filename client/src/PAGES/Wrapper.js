@@ -43,7 +43,7 @@ function Wrapper() {
         <Route exact path="/" component={Home} />
         
         <Route path="/dashboard" component={TaskList} />
-        <Route path="/editTask/:index" component={EditTask} />
+        <Route path="/editTask/:id" component={EditTask} />
         <Route path="/actionPage" component={ActionPage} />
         
         <Route path="/login" component={Login} />
