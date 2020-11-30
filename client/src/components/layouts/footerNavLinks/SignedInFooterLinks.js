@@ -17,7 +17,7 @@ function SignedInFooterLinks() {
      <div>
         <div className="myFooterIcons">
           <Link to="/dashboard" >
-          <i className="fa fa-home"></i> Tasks
+          <i className="fas fa-dice-d20"></i> Tasks
           </Link>
         </div>          
       </div>

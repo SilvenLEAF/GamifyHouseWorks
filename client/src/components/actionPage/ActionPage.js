@@ -138,11 +138,11 @@ function ActionPage() {
 
         <div className="input-field myBtnsHolder right-align">
           <button type="submit" className= "btn myBtn waves-effect waves-light" id= "myDownloadBtn">
-            Gamify <i className="fa fa-gamepad"></i>
+            <i className="fa fa-cogs"></i> Gamify
           </button>
           
           <Link to="/dashboard" className= "btn mySecondaryBtn waves-effect waves-light" id= "myDownloadBtn">
-            TaskList
+            <i className="fa fa-list"></i> Tasks
           </Link>
         </div>
 

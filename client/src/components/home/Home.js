@@ -2,10 +2,10 @@ import M from 'materialize-css'
 import '../../styles/Home.scss';
 
 
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
  
- 
+import { AuthContext } from '../../contexts/subContexts/AuthContext'; 
 
 
 
@@ -17,6 +17,7 @@ function Home() {
 
   
 
+  const { userData } = useContext(AuthContext);
   
   return (
     <div className="container" >
@@ -32,9 +33,17 @@ function Home() {
         </div>
 
         <div className="myLandingBtnHolder">
-          <Link to="/actionPage" className="btn myBtn waves-effect waves-light myLandingBtn" >
-            Action Button
-          </Link>
+          {
+            userData ? (
+              <Link to="/actionPage" className="btn myBtn waves-effect waves-light myLandingBtn" >
+                Gamify
+              </Link>
+            ) : (
+              <Link to="/signup" className="btn myBtn waves-effect waves-light myLandingBtn" >
+                Signup to Gamify
+              </Link>
+            )
+          }
         </div>
       </div>
       
