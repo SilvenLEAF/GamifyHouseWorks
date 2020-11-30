@@ -132,7 +132,7 @@ function UserProfile(props) {
 
         <div>
           <div className="myProfileInfoTitle">
-            <i className="fa fa-twitter"></i> Connect on Twitter
+            <i className="fab fa-twitter"></i> Connect on Twitter
           </div>
           <div className="myProfileInfoAnswer">
           { item.twitterHandle ? item.twitterHandle : (
