@@ -3,7 +3,7 @@ import { NavLink, useHistory } from 'react-router-dom'
 
 
 
-import { Toast } from '../../../helpers/MyAlerts'
+
 
 
 
@@ -17,21 +17,15 @@ export const SignedInMobileLinks = ({ setUserData }) => {
 
 
   const handleLogOut = async (e)=>{
-    Toast.fire({
-      icon: 'info',
-      title: `Please wait...`
-    });    
- 
+     
     const response = await fetch('/logout');
     const data = await response.json();
 
     console.log(data);
 
-    setTimeout(()=>{
-      setUserData(null)
-
-      history.push('/');
-    }, 3000)
+    setUserData(null)
+    history.push('/');
+    
   }
 
 
@@ -66,21 +60,15 @@ export const SignedInPCLinks = ({ setUserData }) => {
   const history = useHistory();
 
   const handleLogOut = async (e)=>{
-    Toast.fire({
-      icon: 'info',
-      title: `Please wait...`
-    });    
- 
+     
     const response = await fetch('/logout');
     const data = await response.json();
 
     console.log(data);
 
-    setTimeout(()=>{
-      setUserData(null)
-
-      history.push('/');
-    }, 3000)
+    setUserData(null)
+    history.push('/');
+    
   }
 
 
