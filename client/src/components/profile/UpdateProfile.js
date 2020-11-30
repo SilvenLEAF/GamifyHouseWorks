@@ -94,7 +94,7 @@ function UpdateProfile() {
       const data = await res.json();
       
       setTimeout(()=>{
-        setUserData(data.user);
+        setUserData(data);
         history.push('/profile')
       }, 3000)
     }
