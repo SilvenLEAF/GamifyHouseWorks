@@ -12,7 +12,7 @@ const User = require('../models/User');
 ---------------------------------- */
 module.exports.get_all_house_works = async (req, res, next)=>{
   try {
-    const allHouseWorks = await HouseWork.find({});
+    const allHouseWorks = await HouseWork.find({ ownerId: req.user._id });
 
     if(!allHouseWorks[0]){
       res.json([0]);
