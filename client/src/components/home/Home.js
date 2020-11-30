@@ -29,7 +29,7 @@ function Home() {
         </h1>
         
         <div className="myLandingDescription">
-          Gamify your boring chores and super boring houseworks! Take the boredom out of your and gamify your daily life!!
+          Gamify your boring chores and super boring houseworks! Take the boredom out and gamify your daily life!!
         </div>
 
         <div className="myLandingBtnHolder">
