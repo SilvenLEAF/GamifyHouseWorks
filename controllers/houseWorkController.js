@@ -14,7 +14,13 @@ module.exports.get_all_house_works = async (req, res, next)=>{
   try {
     const allHouseWorks = await HouseWork.find({});
 
-    res.json(allHouseWorks.reverse());
+    if(!allHouseWorks[0]){
+      res.json([0]);
+      
+    } else {
+      res.json(allHouseWorks.reverse());
+
+    }
 
   } catch (err) {
     next(err, req, res);

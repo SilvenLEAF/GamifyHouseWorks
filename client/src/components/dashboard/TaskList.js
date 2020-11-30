@@ -19,6 +19,7 @@ import { AllTaskContext } from '../../contexts/subContexts/AllTaskContext'
 
 import TaskListItem from './TaskListItem'
 import MyLoader from '../../helpers/MyLoader';
+import MyWelcome from '../../helpers/MyWelcome';
 
 
 
@@ -61,38 +62,43 @@ function TaskList() {
 
 
 
-  // if(!userData) history.push('/login');
-  // if(userData && !userData.isVerified) history.push('/verifyDoor');
-
-  return !allTasks[0] ?  (
-    <div className="myLoaderPageHolder">
-      <MyLoader/>
-    </div>
+  
+  return (!allTasks || (!allTasks[0] && allTasks[0] !== 0)) ?  (
+    <MyLoader/>    
   ) : (
     <div className="container myUserListPage" >      
-      <h6 className="blue-text">All Tasks</h6>
+      <h6 className="blue-text">Clear tasks and Level up</h6>
 
 
       <ul>
         {
-          allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'silver' ).map((item, index)=>{
+          allTasks[0] === 0 && (
+            <MyWelcome title="No Task" />                
+          )          
+          
+        }
+
+
+
+        {
+          allTasks[0] ? allTasks.filter( item => item.rank.toLowerCase() === 'silver' ).map((item, index)=>{
             return <TaskListItem item={ item } score={ 100 } iconImage="/images/rank/silver.jpeg" key={ index } />
-          })          
+          }) : null
         }
 
 
         {
-          allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'gold' ).map((item, index)=>{
+          allTasks[0] ? allTasks.filter( item => item.rank.toLowerCase() === 'gold' ).map((item, index)=>{
             return <TaskListItem item={ item } score={ 250 } iconImage="/images/rank/gold.jpeg" key={ index } />
-          })          
+          }) : null
         }
 
        
 
         {
-          allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'platinum' ).map((item, index)=>{
+          allTasks[0] ? allTasks.filter( item => item.rank.toLowerCase() === 'platinum' ).map((item, index)=>{
             return <TaskListItem item={ item } score={ 500 } iconImage="/images/rank/platinum.jpeg" key={ index } />
-          })          
+          }) : null
         }
       </ul>
 

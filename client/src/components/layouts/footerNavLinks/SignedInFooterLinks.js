@@ -16,8 +16,8 @@ function SignedInFooterLinks() {
       
      <div>
         <div className="myFooterIcons">
-          <Link to="/" >
-          <i className="fa fa-home"></i> Home
+          <Link to="/dashboard" >
+          <i className="fa fa-home"></i> Tasks
           </Link>
         </div>          
       </div>
@@ -28,7 +28,7 @@ function SignedInFooterLinks() {
       <div>
         <div className="myFooterIcons">
           <Link to="/actionPage" >
-          <i className="fa fa-cogs"></i> LING
+          <i className="fa fa-cogs"></i> Gamify
           </Link>
         </div>          
       </div>
