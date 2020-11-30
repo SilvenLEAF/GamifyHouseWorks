@@ -111,9 +111,10 @@ function UpdateProfile() {
       <div className="mainProfileIcon" style={{background: `url(${ userData.profileImage }) center/cover`}} ></div>
 
       <div className="myProfileMainHeader">
-        <div className="myProfileUserName"> { userData.username } </div>
-        <div className="myProfileTitle" >{ userData.title }</div>
-        <div className="myProfileLocation red-text"> All fields are OPTIONAL </div>
+        <div className="myProfileUserName">{ userData.username }</div>
+        <div className="myProfileTitle red-text" >LEVEL { Math.max(1, Math.floor(userData.score/10)) }</div>
+        <div className="myProfileTitle green-text" >XP { userData.score }</div>
+        <div className="myProfileLocation">Task Completed { userData.taskCompleted } </div>
       </div>
 
 
