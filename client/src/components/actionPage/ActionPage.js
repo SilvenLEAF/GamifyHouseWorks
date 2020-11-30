@@ -58,7 +58,7 @@ function ActionPage() {
       })
 
       setTimeout(()=>{
-        history.push('/');
+        history.push('/dashboard');
       }, 3000)
 
     }
