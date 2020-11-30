@@ -76,14 +76,14 @@ function TaskList() {
       <ul>
         {
           allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'silver' ).map((item, index)=>{
-            return <TaskListItem item={ item } iconImage="/images/rank/silver.jpeg" key={ index } />
+            return <TaskListItem item={ item } score={ 100 } iconImage="/images/rank/silver.jpeg" key={ index } />
           })          
         }
 
 
         {
           allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'gold' ).map((item, index)=>{
-            return <TaskListItem item={ item } iconImage="/images/rank/gold.jpeg" key={ index } />
+            return <TaskListItem item={ item } score={ 250 } iconImage="/images/rank/gold.jpeg" key={ index } />
           })          
         }
 
@@ -91,7 +91,7 @@ function TaskList() {
 
         {
           allTasks[0] && allTasks.filter( item => item.rank.toLowerCase() === 'platinum' ).map((item, index)=>{
-            return <TaskListItem item={ item } iconImage="/images/rank/platinum.jpeg" key={ index } />
+            return <TaskListItem item={ item } score={ 500 } iconImage="/images/rank/platinum.jpeg" key={ index } />
           })          
         }
       </ul>

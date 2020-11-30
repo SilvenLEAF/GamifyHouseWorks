@@ -1,5 +1,5 @@
 const HouseWork = require('../models/HouseWork');
-
+const User = require('../models/User');
 
 
 
@@ -89,6 +89,38 @@ module.exports.delete_house_work = async (req, res, next)=>{
     const deletedHouseWork = await HouseWork.findByIdAndRemove(houseWorkId);
 
     res.json(deletedHouseWork);
+
+  } catch (err) {
+    next(err, req, res);
+  }
+}
+
+
+
+
+
+
+
+
+/* ----------------------------------
+.          COMPLETE HOUSEWORK
+---------------------------------- */
+module.exports.complete_house_work = async (req, res, next)=>{
+  try {
+    
+    const { houseWorkId, score } = req.body;
+
+    const user = await User.findById(req.user._id)
+    
+    user.score += score;
+    user.taskCompleted++;
+
+    await user.save();
+    const levelledUpUser = await User.findById(req.user._id);
+    
+    await HouseWork.findByIdAndRemove(houseWorkId);
+
+    res.json(levelledUpUser);
 
   } catch (err) {
     next(err, req, res);

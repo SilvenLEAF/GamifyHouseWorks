@@ -1,11 +1,60 @@
-import React from 'react'
+import React, { useEffect, useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
+import { Toast } from '../../helpers/MyAlerts';
+import { AuthContext } from '../../contexts/subContexts/AuthContext'
 
 
 
-function TaskListItem({ item, iconImage }) {
+
+
+function TaskListItem({ item, score, iconImage }) {
+
+  const { userData, setUserData } = useContext(AuthContext);
+  const [error, setError] = useState('');
+
+  const handleCompleted = async(e)=>{
+
+    Toast.fire({
+      icon: 'info',
+      title: 'Please wait...'
+    })   
+    
+    const response = await fetch('/houseWork/completed', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ houseWorkId: item._id, score: score })
+    });
+
+    const data = await response.json();
+    console.log(data);
+
+    if(data.error) {
+      setError(data.msg);
+    } else {
+      setUserData(data);      
+      Toast.fire({
+        icon: 'success',
+        title: 'Task completed!'
+      })      
+    }
+
+  }
+
+
+
+  useEffect(()=>{
+    if(error){
+      Toast.fire({
+        icon: 'error',
+        title: error
+      })
+    }
+  }, [error])
+
   return (
     <li>
     <div className="myUserProfileIcon" style={{background: `url(${ iconImage || "/Logo.png" }) center/cover` }}></div>
@@ -14,9 +63,7 @@ function TaskListItem({ item, iconImage }) {
         {item.title}
       </div>
 
-      {/* <p className="grey-text">
-        {item.rank}
-      </p> */}
+     
 
       
       <div className="myBtnsHolder myTaskListItemBtnsHolder right-align">
@@ -25,7 +72,7 @@ function TaskListItem({ item, iconImage }) {
           Edit <i className="fa fa-edit"></i>
         </Link>
         
-        <button className="btn myBtn waves-effect waves-light myCornerless" >
+        <button className="btn myBtn waves-effect waves-light myCornerless" onClick={ handleCompleted } >
           Done <i className="fa fa-check"></i>
         </button>
       </div>
