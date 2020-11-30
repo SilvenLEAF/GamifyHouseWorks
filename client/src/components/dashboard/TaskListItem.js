@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 
 
-function TaskListItem({ item, iconImage }) {
+function TaskListItem({ item, index, iconImage }) {
   return (
     <li>
     <div className="myUserProfileIcon" style={{background: `url(${ iconImage || "/Logo.png" }) center/cover` }}></div>
@@ -21,7 +21,7 @@ function TaskListItem({ item, iconImage }) {
       
       <div className="myBtnsHolder myTaskListItemBtnsHolder right-align">
         
-        <Link to="/editHouseWork" className="btn mySecondaryBtn waves-effect waves-light myCornerless" >
+        <Link to={ "/editTask/" + index } className="btn mySecondaryBtn waves-effect waves-light myCornerless" >
           Edit <i className="fa fa-edit"></i>
         </Link>
         
