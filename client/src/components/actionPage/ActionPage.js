@@ -92,7 +92,7 @@ function ActionPage() {
           <label htmlFor="title">Title <span className="red-text">(Required)</span></label>
           <div>
             <i className="myPrefix far fa-address-card"></i>
-            <input type="text" name="contactTitle" value={ title } onChange={ e=> setTitle(e.target.value) } required />
+            <input type="text" name="contactTitle" value={ title } onChange={ e=> setTitle(e.target.value) } required placeholder="Write a boring task" />
           </div>
         </div>
 

@@ -89,7 +89,7 @@ function EditTask() {
   return (
     <div className="container" >
       <form onSubmit= { handleSubmit } className="myDefaultForm" >
-        <h4 className="myDefaultFormName" >Gamify Housework</h4>
+        <h4 className="myDefaultFormName" >Edit Housework</h4>
 
 
 
@@ -100,7 +100,7 @@ function EditTask() {
           <label htmlFor="title">Title <span className="grey-text">(Optional)</span></label>
           <div>
             <i className="myPrefix far fa-address-card"></i>
-            <input type="text" name="contactTitle" value={ title } onChange={ e=> setTitle(e.target.value) } />
+            <input type="text" name="contactTitle" value={ title } onChange={ e=> setTitle(e.target.value) } placeholder={ item.title } />
           </div>
         </div>
 
