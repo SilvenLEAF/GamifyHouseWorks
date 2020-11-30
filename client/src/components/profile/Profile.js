@@ -34,24 +34,28 @@ function Profile() {
       title: 'Please wait...'
     })
 
-    const userId = userData._id;
+    if(userData.role === 'demo'){
+      window.location.href = '/logout'
+    } else {
+      const userId = userData._id;
     
-    const deletedProfileRes = await fetch('/user/', {
-      method: 'DELETE',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({userId})
-    });
+      const deletedProfileRes = await fetch('/user/', {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({userId})
+      });
 
-    const deletedProfileData = await deletedProfileRes.json();
+      const deletedProfileData = await deletedProfileRes.json();
 
-    console.log(deletedProfileData)
-    
-    setTimeout(()=>{
-      history.push('/login')
-      setUserData(null);
-    }, 3000)
+      console.log(deletedProfileData)
+      
+      setTimeout(()=>{
+        history.push('/login')
+        setUserData(null);
+      }, 3000)
+    }
   }
 
 
