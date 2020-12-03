@@ -4,7 +4,6 @@ Gamify your boring chores and super boring HouseWorks!!!
 ***
 
 ## See LIVE
-***This link will not work now. App is still in development***
 <a href="https://silvenleafgamifyhouseworks.herokuapp.com">https://SilvenLeafGamifyHouseWorks.herokuapp.com</a>
 
 ***
@@ -83,5 +82,7 @@ Now open your favorite browser (mine is Chrome) and then go to **localhost:5000*
 
 ## Gallery
 
-*Images will be added here in the future!*
+<img src="/READMEimages/GamifyHouseWorks2d.png" />
+<img src="/READMEimages/GamifyHouseWorks3d.png" />
+
 ***
