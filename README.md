@@ -33,9 +33,9 @@ Gamify your boring chores and super boring HouseWorks!!!
 
 
 ## Technologies
-**BackEND:**  *NodeJS, ExpressJS, PassportJS (OAUTH2.0), REST Api*
+**BackEND:**  *TypeScript, NodeJS, ExpressJS, PassportJS (OAUTH2.0), REST Api*
 
-**FrontEND:** *React, SASS, Materialize, Hooks and Context API*
+**FrontEND:** *TypeScript, React, SASS, Materialize, Hooks and Context API*
 
 **Database:** *MongoDB (with mongoose)*
 
