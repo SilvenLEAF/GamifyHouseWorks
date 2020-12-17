@@ -6,7 +6,7 @@ import chalk from 'chalk';      // chalk makes colorful console.logs only to mak
 
 
 if(process.env.NODE_ENV !== 'production'){
-  import dotenv from 'dotenv';     // to laod development variables on development mode
+  const dotenv = require('dotenv');     // to laod development variables on development mode
   // if we are on developemnt, load the development variables
   dotenv.config();
 }
